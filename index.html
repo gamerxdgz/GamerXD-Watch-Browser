@@ -2,145 +2,138 @@
 <html>
 
 <head>
-<title>GamerXD Browser</title>
-<link rel="stylesheet" href="style.css">
+    <title>GamerXD Browser v10.0</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<div class="watch">
+<div class="browser">
 
-<div id="boot">
-<h1>⚡ GamerXD</h1>
-<p>Starting Browser...</p>
-<div class="loader"></div>
-</div>
-
-
-<div id="app">
+    <div id="boot">
+        <h1>⚡ GamerXD</h1>
+        <p>Starting Browser v10.0</p>
+        <div class="loader"></div>
+    </div>
 
 
-<header>
+    <div id="app">
 
-<h2>🌐 GamerXD</h2>
-
-<div id="clock">
-00:00
-</div>
-
-</header>
+        <header>
+            <h2>🌐 GamerXD Browser</h2>
+            <span id="clock"></span>
+        </header>
 
 
-
-<section id="home">
-
-
-<input id="search"
-placeholder="Search or enter URL">
-
-
-<button onclick="search()">
-🔍 Search
-</button>
+        <nav>
+            <button onclick="showHome()">🏠</button>
+            <button onclick="newTab()">➕</button>
+            <button onclick="showBookmarks()">⭐</button>
+            <button onclick="showHistory()">📜</button>
+            <button onclick="showSettings()">⚙️</button>
+        </nav>
 
 
-<div class="buttons">
+        <section id="home">
 
-<button onclick="openPage('https://github.com')">
-💻 GitHub
-</button>
+            <input id="search"
+            placeholder="Search the web">
 
-
-<button onclick="openPage('https://www.youtube.com')">
-▶️ YouTube
-</button>
+            <button onclick="searchWeb()">
+                🔍 Search
+            </button>
 
 
-<button onclick="openPage('https://www.tiktok.com')">
-🎵 TikTok
-</button>
+            <div class="cards">
 
+                <button onclick="openPage('https://github.com')">
+                    💻 GitHub
+                </button>
 
-<button onclick="showSettings()">
-⚙ Settings
-</button>
+                <button onclick="openPage('https://youtube.com')">
+                    ▶️ YouTube
+                </button>
 
-</div>
+                <button onclick="openPage('https://duckduckgo.com')">
+                    🦆 Search
+                </button>
 
+            </div>
 
-</section>
+        </section>
 
 
 
-<section id="browser">
+        <section id="browser">
+
+            <div id="tabs"></div>
+
+            <div class="bar">
+
+                <button onclick="back()">⬅</button>
+                <button onclick="forward()">➡</button>
+                <button onclick="reload()">⟳</button>
+
+                <input id="url"
+                placeholder="Website URL">
+
+                <button onclick="go()">
+                    Go
+                </button>
+
+            </div>
 
 
-<div class="topbar">
-
-<button onclick="home()">
-🏠
-</button>
-
-
-<button onclick="back()">
-←
-</button>
+            <div id="loading">
+                Loading...
+                <div class="loader"></div>
+            </div>
 
 
-<button onclick="forward()">
-→
-</button>
+            <iframe id="page"></iframe>
 
 
-<button onclick="reload()">
-⟳
-</button>
-
-</div>
-
-
-
-<div id="loading">
-Loading...
-<div class="loader"></div>
-</div>
-
-
-<iframe id="frame"></iframe>
-
-
-</section>
+        </section>
 
 
 
 
-<section id="settings">
-
-
-<h3>⚙ Settings</h3>
-
-
-<button onclick="theme()">
-🌙 Change Theme
-</button>
-
-
-<button onclick="home()">
-🏠 Home
-</button>
-
-
-</section>
+        <section id="bookmarks">
+            <h3>⭐ Bookmarks</h3>
+            <div id="bookmarkList"></div>
+        </section>
 
 
 
-</div>
+        <section id="history">
+            <h3>📜 History</h3>
+            <div id="historyList"></div>
+        </section>
+
+
+
+        <section id="settings">
+            <h3>⚙ Settings</h3>
+
+            <button onclick="toggleTheme()">
+                Change Theme
+            </button>
+
+        </section>
+
+
+    </div>
 
 </div>
 
 
-<script src="browser.js"></script>
+<script src="core/engines.js"></script>
+<script src="core/history.js"></script>
+<script src="core/bookmarks.js"></script>
+<script src="core/tabs.js"></script>
+<script src="core/browser.js"></script>
+<script src="app.js"></script>
+
 
 </body>
 </html>
