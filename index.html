@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GamerXD Watch Browser</title>
-    <link rel="stylesheet" href="style.css">
+<title>GamerXD Browser</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="watch">
-    <h2>🌐 GamerXD Browser</h2>
 
-    <input id="url" placeholder="Enter website...">
+<div id="loading">
+<h1>⚡</h1>
+<p>Starting GamerXD Browser...</p>
+</div>
 
-    <div>
-        <button onclick="go()">Go</button>
-        <button onclick="back()">←</button>
-        <button onclick="forward()">→</button>
-        <button onclick="refresh()">⟳</button>
-    </div>
 
-    <iframe id="page"></iframe>
+<div id="app">
+
+<h2>🌐 GamerXD Browser</h2>
+
+<div id="home">
+
+<button onclick="openSite('https://www.google.com')">
+🔍 Google
+</button>
+
+<button onclick="openSite('https://www.youtube.com')">
+▶️ YouTube
+</button>
+
+<button onclick="openSite('https://www.github.com')">
+💻 GitHub
+</button>
+
+<button onclick="settings()">
+⚙️ Settings
+</button>
 
 </div>
+
+
+<div id="browser">
+
+<input id="url" placeholder="Search or enter URL">
+
+<button onclick="go()">
+GO
+</button>
+
+<div id="viewer">
+Your page will appear here
+</div>
+
+</div>
+
+
+<div id="settings">
+
+<h3>⚙ Settings</h3>
+
+<button onclick="darkMode()">
+🌙 Toggle Theme
+</button>
+
+<button onclick="home()">
+🏠 Home
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
 
 <script src="browser.js"></script>
 
