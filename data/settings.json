@@ -1,1 +1,6 @@
-
+{
+"name":"GamerXD Browser",
+"version":"10.0",
+"defaultEngine":"DuckDuckGo",
+"theme":"cyber"
+}
