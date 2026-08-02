@@ -1,44 +1,36 @@
-*{
-box-sizing:border-box;
-}
+body {
 
+background:#050505;
 
-body{
+color:white;
 
-margin:0;
+font-family:Arial;
 
 height:100vh;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
 
-background:#050505;
-
-font-family:Arial;
-
-color:white;
+align-items:center;
 
 }
 
 
+.browser {
 
-.watch{
+width:360px;
 
-width:340px;
-
-height:450px;
+height:520px;
 
 background:#111;
 
-border-radius:70px;
+border-radius:50px;
 
 padding:20px;
 
 box-shadow:
-0 0 30px cyan;
+0 0 40px cyan;
 
 overflow:hidden;
 
@@ -46,47 +38,7 @@ overflow:hidden;
 
 
 
-#boot{
-
-text-align:center;
-
-margin-top:120px;
-
-}
-
-
-
-.loader{
-
-width:35px;
-
-height:35px;
-
-border:4px solid white;
-
-border-top:4px solid cyan;
-
-border-radius:50%;
-
-animation:spin 1s linear infinite;
-
-margin:auto;
-
-}
-
-
-
-@keyframes spin{
-
-100%{
-transform:rotate(360deg);
-}
-
-}
-
-
-
-#app{
+#app {
 
 display:none;
 
@@ -94,7 +46,7 @@ display:none;
 
 
 
-header{
+header {
 
 display:flex;
 
@@ -104,21 +56,7 @@ justify-content:space-between;
 
 
 
-input{
-
-width:70%;
-
-padding:10px;
-
-border-radius:20px;
-
-border:none;
-
-}
-
-
-
-button{
+button {
 
 background:#222;
 
@@ -136,26 +74,35 @@ margin:5px;
 
 
 
-button:hover{
+button:hover {
 
-transform:scale(1.05);
-
-}
-
-
-
-.buttons{
-
-display:flex;
-
-flex-direction:column;
+transform:scale(1.08);
 
 }
 
 
 
-#browser,
-#settings{
+input {
+
+padding:10px;
+
+border-radius:20px;
+
+width:70%;
+
+}
+
+
+
+nav {
+
+text-align:center;
+
+}
+
+
+
+section {
 
 display:none;
 
@@ -163,11 +110,21 @@ display:none;
 
 
 
-iframe{
+#home {
+
+display:block;
+
+}
+
+
+
+iframe {
 
 width:100%;
 
 height:300px;
+
+border:none;
 
 border-radius:20px;
 
@@ -177,27 +134,38 @@ background:white;
 
 
 
-.topbar{
+.loader {
 
-display:flex;
+width:40px;
 
-justify-content:center;
+height:40px;
+
+border-radius:50%;
+
+border:5px solid white;
+
+border-top-color:cyan;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
 
 }
 
 
 
-#loading{
+@keyframes spin {
 
-display:none;
+100% {
 
-text-align:center;
+transform:rotate(360deg);
+
+}
 
 }
 
 
-
-.light{
+.light {
 
 background:white;
 
