@@ -1,73 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>GamerXD Browser</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
 <div class="watch">
 
-<div id="loading">
-<h1>⚡</h1>
-<p>Starting GamerXD Browser...</p>
+<div id="boot">
+<h1>⚡ GamerXD</h1>
+<p>Starting Browser...</p>
+<div class="loader"></div>
 </div>
 
 
 <div id="app">
 
-<h2>🌐 GamerXD Browser</h2>
 
-<div id="home">
+<header>
 
-<button onclick="openSite('https://www.google.com')">
-🔍 Google
+<h2>🌐 GamerXD</h2>
+
+<div id="clock">
+00:00
+</div>
+
+</header>
+
+
+
+<section id="home">
+
+
+<input id="search"
+placeholder="Search or enter URL">
+
+
+<button onclick="search()">
+🔍 Search
 </button>
 
-<button onclick="openSite('https://www.youtube.com')">
-▶️ YouTube
-</button>
 
-<button onclick="openSite('https://www.github.com')">
+<div class="buttons">
+
+<button onclick="openPage('https://github.com')">
 💻 GitHub
 </button>
 
-<button onclick="settings()">
-⚙️ Settings
+
+<button onclick="openPage('https://www.youtube.com')">
+▶️ YouTube
+</button>
+
+
+<button onclick="openPage('https://www.tiktok.com')">
+🎵 TikTok
+</button>
+
+
+<button onclick="showSettings()">
+⚙ Settings
 </button>
 
 </div>
 
 
-<div id="browser">
+</section>
 
-<input id="url" placeholder="Search or enter URL">
 
-<button onclick="go()">
-GO
+
+<section id="browser">
+
+
+<div class="topbar">
+
+<button onclick="home()">
+🏠
 </button>
 
-<div id="viewer">
-Your page will appear here
-</div>
+
+<button onclick="back()">
+←
+</button>
+
+
+<button onclick="forward()">
+→
+</button>
+
+
+<button onclick="reload()">
+⟳
+</button>
 
 </div>
 
 
-<div id="settings">
+
+<div id="loading">
+Loading...
+<div class="loader"></div>
+</div>
+
+
+<iframe id="frame"></iframe>
+
+
+</section>
+
+
+
+
+<section id="settings">
+
 
 <h3>⚙ Settings</h3>
 
-<button onclick="darkMode()">
-🌙 Toggle Theme
+
+<button onclick="theme()">
+🌙 Change Theme
 </button>
+
 
 <button onclick="home()">
 🏠 Home
 </button>
 
-</div>
+
+</section>
+
 
 
 </div>
